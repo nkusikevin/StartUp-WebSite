@@ -5,7 +5,7 @@ import SectionHeader from 'components/section-header';
 import TeamCard from 'components/team-card';
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 
-import Member1 from 'assets/team/member-1.png';
+import Member1 from "assets/team/Nkevin.jpg";
 import Member2 from 'assets/team/member-2.png';
 import Member3 from 'assets/team/member-3.png';
 import Member4 from 'assets/team/member-4.png';
@@ -16,8 +16,8 @@ const data = [
   {
     id: 1,
     imgSrc: Member1,
-    altText: 'Saimon Harmer',
-    title: 'Saimon Harmer',
+    altText: 'Nkusi Kevin',
+    title: 'NKUSI Kevin',
     designation: 'CEO and Founder',
     socialProfile: [
       {
@@ -179,7 +179,23 @@ const data = [
 
 export default function TeamSection() {
   return (
-    <h1>Team Section</h1>
+    <section>
+      <Container>
+        <SectionHeader slogan="Our Team" title="The Most Qualified And Talented Individuals"/>
+        <Grid sx={styles.grid}>
+          {data.map((item)=>(
+            <TeamCard
+            key={item.id}
+            src={item.imgSrc}
+            altText={item.altText}
+            title={item.title}
+            designation={item.designation}
+            social={item.socialProfile}
+            />
+          ))}
+        </Grid>
+      </Container>
+    </section>
   );
 }
 
