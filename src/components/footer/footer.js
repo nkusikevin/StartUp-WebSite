@@ -26,7 +26,7 @@ export default function Footer() {
 						</nav>
 					</Box>
 					<Text sx={styles.footer.copyright}>
-						CopyRight &copy; {new Date().getFullYear()} Developed  By Nkusi Kevin_
+						CopyRight &copy; {new Date().getFullYear()} Developed By Nkusi Kevin_
 					</Text>
 				</Box>
 			</Container>
