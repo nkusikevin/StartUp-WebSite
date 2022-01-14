@@ -6,10 +6,17 @@ export default function FeatureCardColumn({
   altText = 'default alt text',
   title,
   text,
+  
 }) {
   return (
-    <h1>FeatureCardColumn</h1>
-  );
+		<Box sx={styles.card}>
+			<Image src={src} alt={altText} sx={styles.image} />
+      <Box sx={styles.wrapper}>
+        <Heading sx={styles.wrapper.title}>{title}</Heading>
+        <Text sx={styles.wrapper.text}>{text}</Text>
+      </Box>
+		</Box>
+	);
 }
 
 const styles = {
