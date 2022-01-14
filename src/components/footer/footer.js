@@ -6,8 +6,32 @@ import FooterLogo from 'assets/logo.svg';
 
 export default function Footer() {
   return (
-    <h1>Footer</h1>
-  );
+		<footer sx={styles.footer}>
+			<Container>
+				<Box sx={styles.footer.footerBottomArea}>
+					<Link path='/'>
+						<Image src={FooterLogo} alt='logo' />
+					</Link>
+					<Box sx={styles.footer.menus}>
+						<nav>
+							{data.menuItem.map((item, index) => (
+								<Link
+									key={index}
+									path={item.path}
+									label={item.path}
+									sx={styles.footer.link}>
+									{item.label}
+								</Link>
+							))}
+						</nav>
+					</Box>
+					<Text sx={styles.footer.copyright}>
+						CopyRight &copy; {new Date().getFullYear()} Developed  By Nkusi Kevin_
+					</Text>
+				</Box>
+			</Container>
+		</footer>
+	);
 }
 
 const styles = {
